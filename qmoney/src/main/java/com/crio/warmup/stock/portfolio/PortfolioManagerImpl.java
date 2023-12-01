@@ -114,10 +114,11 @@ public class PortfolioManagerImpl implements PortfolioManager {
               double sellPrice = stockQuotes.get(stockQuotes.size() - 1).getClose();
               double totalReturn = (sellPrice - buyPrice) / buyPrice;
               double totalDays = DAYS.between(purchaseDate, endDate);
-              
-              double annualizedReturn = Math.pow(1 + totalReturn, 365 / totalDays) - 1;
+              double annualizedReturn = 0.0;
+               annualizedReturn = Math.pow(1 + totalReturn, 365 / totalDays) - 1;
               AnnualizedReturn result = new AnnualizedReturn(symbol, annualizedReturn, totalReturn);
               annualizedReturns.add(result);
+              
             
 
         }

@@ -186,7 +186,7 @@ private static List<String> extractSymbolsFromPortfolioTrades(List<PortfolioTrad
       if (purchaseDate.isAfter(endDate)) {
         throw new RuntimeException("Purchase date is after the endDate");
     }
-      String uri = prepareUrl(trade,LocalDate.parse(args[1]),"c3c83a02990a793aaae241d76e45e6b3fde92668");
+      String uri = prepareUrl(trade,LocalDate.parse(args[1]),"069888df301e5947948e4755664a28d7d042a5f6");
       TiingoCandle[] tiingoCandles = restTemplate.getForObject(uri, TiingoCandle[].class);
       
       if (tiingoCandles != null && tiingoCandles.length > 0) {
@@ -382,7 +382,7 @@ private static List<String> extractSymbolsFromPortfolioTrades(List<PortfolioTrad
     printJsonObject(mainCalculateReturnsAfterRefactor(args));
   }
 public static String getToken() {
-    return "c3c83a02990a793aaae241d76e45e6b3fde92668";
+    return "069888df301e5947948e4755664a28d7d042a5f6";
 }
 }
 
